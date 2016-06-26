@@ -1,0 +1,10 @@
+<div class="m-resizable m-resizable-{handleType} {class}" ref="element" r-hide={!visible} style="left: {left}px; top: {top}px; width: {width}px; height: {height}px;">
+    {#list handles as handle}
+        <draggable disabled={disabled} proxy=""
+            on-dragstart={this._onDragStart($event)}
+            on-drag={this._onDrag($event, handle)}>
+            <div class="resizable_handle resizable_handle-{handle}"></div>
+        </draggable>
+    {/list}
+    {#inc this.$body}
+</div>

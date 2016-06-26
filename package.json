@@ -1,0 +1,17 @@
+{
+  "name": "rgui-resizable",
+  "description": "Regular UI - Resizable",
+  "version": "0.2.0",
+  "author": "Rainfore <rainforest92@126.com>",
+  "main": "./index.js",
+  "repository": "regular-ui/ui-resizable",
+  "homepage": "http://regular-ui.github.io",
+  "bugs": {"url": "http://github.com/regular-ui/ui-resizable/issues"},
+  "license": "MIT",
+  "keywords": ["regular", "ui", "resizable"],
+  "tags": ["regular", "ui", "resizable"],
+  "dependencies": {
+    "rgui-base": "^0.2.0-alpha",
+    "rgui-drag": "regular-ui/ui-drag#master"
+  }
+}
