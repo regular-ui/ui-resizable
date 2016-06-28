@@ -15,7 +15,7 @@
 .m-panel {box-sizing: border-box; width: 100%; height: 100%;}
 ```
 
-### 限制句柄
+### 设置句柄
 
 <div class="m-example"></div>
 
@@ -32,11 +32,22 @@
 <div class="m-example"></div>
 
 ```xml
-<resizable handleType="square">
-    <div class="m-panel m-panel-info">
-        <div class="panel_bd">将鼠标移到Panel边缘处，尝试调整大小。</div>
+<div class="g-row">
+    <div class="g-col g-col-6">
+        <resizable handleType="square">
+            <div class="m-panel m-panel-info">
+                <div class="panel_bd">将鼠标移到Panel边缘处，尝试调整大小。</div>
+            </div>
+        </resizable>
     </div>
-</resizable>
+    <div class="g-col g-col-6">
+        <resizable handleType="debug">
+            <div class="m-panel m-panel-info">
+                <div class="panel_bd">将鼠标移到Panel边缘处，尝试调整大小。</div>
+            </div>
+        </resizable>
+    </div>
+</div>
 ```
 
 ### 最小值和最大值

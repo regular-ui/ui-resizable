@@ -28,7 +28,7 @@ let manager = {
  */
 let Resizable = Component.extend({
     name: 'resizable',
-    template: template,
+    template,
     /**
      * @protected
      * @override
