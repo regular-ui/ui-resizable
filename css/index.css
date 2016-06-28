@@ -100,3 +100,6 @@
 	height:8px;
 	width:8px;
 }
+.m-resizable-debug .resizable_handle:hover,.m-resizable-debug .resizable_handle.z-dragSource{
+	background:rgba(0,128,255,0.6);
+}

@@ -47,7 +47,7 @@
 </code></pre>
 <pre class="lang-css"><code><span class="cm-qualifier">.m-panel</span> {<span class="cm-property">box-sizing</span>: <span class="cm-atom">border-box</span>; <span class="cm-property">width</span>: <span class="cm-number">100%</span>; <span class="cm-property">height</span>: <span class="cm-number">100%</span>;}
 </code></pre>
-<h3 id="限制句柄">限制句柄</h3>
+<h3 id="设置句柄">设置句柄</h3>
 <div class="m-example"></div>
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">resizable</span> <span class="cm-attribute">handles</span>=<span class="cm-attribute">{[</span><span class="cm-stringcm-error">&#39;bottom&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;right&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;bottomright&#39;</span><span class="cm-attribute">]}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
@@ -59,11 +59,22 @@
 <h3 id="句柄类型">句柄类型</h3>
 <div class="m-example"></div>
 
-<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">resizable</span> <span class="cm-attribute">handleType</span>=<span class="cm-string">&quot;square&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
-    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;m-panel m-panel-info&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
-        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;panel_bd&quot;</span><span class="cm-tagcm-bracket">&gt;</span>将鼠标移到Panel边缘处，尝试调整大小。<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;g-row&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;g-col g-col-6&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">resizable</span> <span class="cm-attribute">handleType</span>=<span class="cm-string">&quot;square&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;m-panel m-panel-info&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+                <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;panel_bd&quot;</span><span class="cm-tagcm-bracket">&gt;</span>将鼠标移到Panel边缘处，尝试调整大小。<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">resizable</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
-<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">resizable</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;g-col g-col-6&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">resizable</span> <span class="cm-attribute">handleType</span>=<span class="cm-string">&quot;debug&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;m-panel m-panel-info&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+                <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;panel_bd&quot;</span><span class="cm-tagcm-bracket">&gt;</span>将鼠标移到Panel边缘处，尝试调整大小。<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">resizable</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
 <h3 id="最小值和最大值">最小值和最大值</h3>
 <div class="m-example"></div>
@@ -185,9 +196,18 @@
 <script src="../js/index.js"></script>
 <script>
 var $$ = function(selector){return document.querySelectorAll(selector)};
+// 添加小标题链接
 $$('.m-article > h2, .m-article > h3').forEach(function($heading) {
     $heading.innerHTML = '<a href="#' + $heading.id + '">' + $heading.innerText + '</a>';
 });
+// 在模板中添加console
+(function() {
+    var supr = RGUI.Component.prototype.config;
+    RGUI.Component.prototype.config = function() {
+        this.data.console = console;
+        return supr.call(this);
+    }
+})();
 </script>
 <script>
 "use strict";
@@ -208,7 +228,7 @@ var index = 0;
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<resizable handleType=\"square\">\n    <div class=\"m-panel m-panel-info\">\n        <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n    </div>\n</resizable>";
+    var template = "<div class=\"g-row\">\n    <div class=\"g-col g-col-6\">\n        <resizable handleType=\"square\">\n            <div class=\"m-panel m-panel-info\">\n                <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n            </div>\n        </resizable>\n    </div>\n    <div class=\"g-col g-col-6\">\n        <resizable handleType=\"debug\">\n            <div class=\"m-panel m-panel-info\">\n                <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n            </div>\n        </resizable>\n    </div>\n</div>";
     var component = new RGUI.Component({
         template: template
     });
