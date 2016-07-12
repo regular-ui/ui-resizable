@@ -1,5 +1,5 @@
 {
-  "name": "rgui-resizable",
+  "name": "rgui-ui-resizable",
   "description": "Regular UI - Resizable",
   "version": "0.2.0",
   "author": "Rainfore <rainforest92@126.com>",
@@ -11,7 +11,7 @@
   "keywords": ["regular", "ui", "resizable"],
   "tags": ["regular", "ui", "resizable"],
   "dependencies": {
-    "rgui-base": "0.2.0-alpha.1",
-    "rgui-drag": "regular-ui/ui-drag#master"
+    "rgui-ui-base": "0.2.0-alpha",
+    "rgui-ui-drag": "regular-ui/ui-drag#master"
   }
 }

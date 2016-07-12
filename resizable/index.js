@@ -1,4 +1,4 @@
-import {Component, _} from 'rgui-base';
+import {Component, _} from 'rgui-ui-base';
 import template from './index.rgl';
 
 let manager = {
