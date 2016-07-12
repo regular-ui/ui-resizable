@@ -8,16 +8,16 @@ Regular UI - Resizable
 [![Dependencies][david-img]][david-url]
 [![NPM Download][download-img]][download-url]
 
-[npm-img]: http://img.shields.io/npm/v/rgui-resizable.svg?style=flat-square
-[npm-url]: http://npmjs.org/package/rgui-resizable
+[npm-img]: http://img.shields.io/npm/v/rgui-ui-resizable.svg?style=flat-square
+[npm-url]: http://npmjs.org/package/rgui-ui-resizable
 [travis-img]: https://img.shields.io/travis/regular-ui/ui-resizable.svg?style=flat-square
 [travis-url]: https://travis-ci.org/regular-ui/ui-resizable
 [coveralls-img]: https://img.shields.io/coveralls/regular-ui/ui-resizable.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/regular-ui/ui-resizable
 [david-img]: http://img.shields.io/david/regular-ui/ui-resizable.svg?style=flat-square
 [david-url]: https://david-dm.org/regular-ui/ui-resizable
-[download-img]: https://img.shields.io/npm/dm/rgui-resizable.svg?style=flat-square
-[download-url]: https://npmjs.org/package/rgui-resizable
+[download-img]: https://img.shields.io/npm/dm/rgui-ui-resizable.svg?style=flat-square
+[download-url]: https://npmjs.org/package/rgui-ui-resizable
 
 ## Resizable（调整大小）
 
