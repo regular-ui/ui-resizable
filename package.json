@@ -8,8 +8,8 @@
   "homepage": "http://regular-ui.github.io",
   "bugs": {"url": "http://github.com/regular-ui/ui-resizable/issues"},
   "license": "MIT",
-  "keywords": ["regular", "ui", "resizable"],
-  "tags": ["regular", "ui", "resizable"],
+  "keywords": ["regular", "ui", "rgui", "resizable"],
+  "tags": ["regular", "ui", "rgui", "resizable"],
   "dependencies": {
     "rgui-ui-base": "0.2.0-alpha.2",
     "rgui-ui-drag": "regular-ui/ui-drag#master"
