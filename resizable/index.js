@@ -1,4 +1,5 @@
-import {Component, _} from 'rgui-ui-base';
+import { Component } from 'rgui-ui-base';
+import { Draggable } from 'rgui-ui-drag';
 import template from './index.rgl';
 
 let manager = {
