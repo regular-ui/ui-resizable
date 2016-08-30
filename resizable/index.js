@@ -35,7 +35,7 @@ const Resizable = Component.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             left: 0,
             top: 0,
             width: 300,
@@ -47,7 +47,7 @@ const Resizable = Component.extend({
             range: undefined,
             handles: ['top', 'bottom', 'left', 'right', 'topleft', 'topright', 'bottomleft', 'bottomright'],
             handleType: '',
-        }, this.data);
+        });
         this.supr();
     },
     /**
