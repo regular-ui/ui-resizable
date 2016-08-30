@@ -2,11 +2,11 @@ import { Component } from 'rgui-ui-base';
 import { Draggable } from 'rgui-ui-drag';
 import template from './index.rgl';
 
-let manager = {
+const manager = {
     startLeft: 0,
     startTop: 0,
     startWidth: 0,
-    startHeight: 0
+    startHeight: 0,
 };
 
 /**
@@ -27,7 +27,7 @@ let manager = {
  * @param {boolean=false}           options.data.disabled            => 是否禁用
  * @param {string=''}               options.data.class               => 补充class
  */
-let Resizable = Component.extend({
+const Resizable = Component.extend({
     name: 'resizable',
     template,
     /**
@@ -46,7 +46,7 @@ let Resizable = Component.extend({
             maxHeight: Infinity,
             range: undefined,
             handles: ['top', 'bottom', 'left', 'right', 'topleft', 'topright', 'bottomleft', 'bottomright'],
-            handleType: ''
+            handleType: '',
         }, this.data);
         this.supr();
     },
@@ -59,21 +59,21 @@ let Resizable = Component.extend({
     _getRange(proxy) {
         let range;
 
-        if(typeof this.data.range === 'object')
+        if (typeof this.data.range === 'object')
             range = this.data.range;
-        else if(this.data.range === 'offsetParent') {
-            var offsetParent = proxy.offsetParent;
-            if(offsetParent)
-                range = {left: 0, top: 0, right: offsetParent.offsetWidth, bottom: offsetParent.offsetHeight};
+        else if (this.data.range === 'offsetParent') {
+            const offsetParent = proxy.offsetParent;
+            if (offsetParent)
+                range = { left: 0, top: 0, right: offsetParent.offsetWidth, bottom: offsetParent.offsetHeight };
             else
-                range = {left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight};
-        } else if(this.data.range === 'parent') {
+                range = { left: 0, top: 0, right: window.innerWidth, bottom: window.innerHeight };
+        } else if (this.data.range === 'parent') {
             // range = proxy.parentElement;
-        } else if(range instanceof Element) {
+        } else if (range instanceof Element) {
             //
         }
 
-        if(range) {
+        if (range) {
             range.width = range.right - range.left;
             range.height = range.bottom - range.top;
         }
@@ -89,7 +89,7 @@ let Resizable = Component.extend({
             startTop: this.data.top,
             startWidth: this.data.width,
             startHeight: this.data.height,
-            range: this._getRange(this.$refs.element)
+            range: this._getRange(this.$refs.element),
         });
     },
     /**
@@ -101,28 +101,28 @@ let Resizable = Component.extend({
         let width = manager.startWidth;
         let height = manager.startHeight;
 
-        if(handle.includes('left')) {
-            let rangeWidth = manager.range ? manager.startLeft + manager.startWidth - manager.range.left : Infinity;
+        if (handle.includes('left')) {
+            const rangeWidth = manager.range ? manager.startLeft + manager.startWidth - manager.range.left : Infinity;
             width = manager.startWidth - $event.dragX;
             width = Math.min(Math.max(this.data.minWidth, width), this.data.maxWidth, rangeWidth);
             left += manager.startWidth - width;
         }
 
-        if(handle.includes('top')) {
-            let rangeHeight = manager.range ? manager.startTop + manager.startHeight - manager.range.top : Infinity;
+        if (handle.includes('top')) {
+            const rangeHeight = manager.range ? manager.startTop + manager.startHeight - manager.range.top : Infinity;
             height = manager.startHeight - $event.dragY;
             height = Math.min(Math.max(this.data.minHeight, height), this.data.maxHeight, rangeHeight);
             top += manager.startHeight - height;
         }
 
-        if(handle.includes('right')) {
-            let rangeWidth = manager.range ? manager.range.right - manager.startLeft : Infinity;
+        if (handle.includes('right')) {
+            const rangeWidth = manager.range ? manager.range.right - manager.startLeft : Infinity;
             width = manager.startWidth + $event.dragX;
             width = Math.min(Math.max(this.data.minWidth, width), this.data.maxWidth, rangeWidth);
         }
 
-        if(handle.includes('bottom')) {
-            let rangeHeight = manager.range ? manager.range.bottom - manager.startTop : Infinity;
+        if (handle.includes('bottom')) {
+            const rangeHeight = manager.range ? manager.range.bottom - manager.startTop : Infinity;
             height = manager.startHeight + $event.dragY;
             height = Math.min(Math.max(this.data.minHeight, height), this.data.maxHeight, rangeHeight);
         }
@@ -142,9 +142,9 @@ let Resizable = Component.extend({
          */
         this.$emit('resize', {
             sender: this,
-            left, top, width, height
+            left, top, width, height,
         });
-    }
+    },
 });
 
 export default Resizable;
