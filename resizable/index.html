@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/docs.default.min.css">
 <link rel="stylesheet" href="../css/index.css">
 <!--[if lt IE9]>
 <script>
@@ -88,52 +88,54 @@
 
         <h2 id="API">API</h2>
 
-<h3 id="Class">Class</h3>
-<h4>Resizable</h4>
-<p>继承自<strong>Component</strong>。</p>
-<p></p>
-<div id="j-class"></div>
 
-<h3 id="Options">Options</h3>
-<h4>new Resizable()</h4>
-<table>
-    <thead>
-        <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
-    </thead>
-    <tbody>
-        
+    <h3 id="Class">Class</h3>
+    <h4>Resizable</h4>
+    <p>继承自<strong></strong>。</p>
+    <p></p>
+    <div id="j-class"></div>
+
+    <h3 id="Options">Options</h3>
+    <h4>new Resizable()</h4>
+    <table>
+        <thead>
+            <tr><th width="24%">参数</th><th width="16%">类型</th><th width="16%">默认值</th><th width="18%">数据流向</th><th width="26%">描述</th></tr>
+        </thead>
+        <tbody>
             
-            <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">Object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.left</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>水平位置</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.top</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>垂直位置</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.width</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>300</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>宽度</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.height</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>200</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>高度</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.minWidth</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside  =&gt; inside</td><td>最小宽度</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.minHeight</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside  =&gt; inside</td><td>最小高度</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.maxWidth</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>Infinity</code></td><td class="f-tac">outside  =&gt; inside</td><td>最大宽度</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.maxHeight</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>Infinity</code></td><td class="f-tac">outside  =&gt; inside</td><td>最大高度</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.range</code></td><td class="f-wsn">string<br>object<br>Element<br>function</td><td class="f-wsn"></td><td class="f-tac">outside @=&gt; inside</td><td>拖拽范围。值可以为一个{left,top,right,bottom}格式的对象，表示代理元素移动的上下左右边界。当值为`offsetParent`，拖拽时代理元素限制在offsetParent中移动；当值为`parent`；当值为。也可以直接传入一个元素或函数。</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.handles</code></td><td class="f-wsn">Array</td><td class="f-wsn"><code>[...]</code></td><td class="f-tac">outside  =&gt; inside</td><td>句柄</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.handleType</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>句柄类型</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用</td></tr>
+                
+                <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
+                
             
-            <tr><td class="f-wsn"><code>data.left</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>水平位置</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.top</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>垂直位置</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.width</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>300</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>宽度</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.height</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>200</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>高度</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.minWidth</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside  =&gt; inside</td><td>最小宽度</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.minHeight</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside  =&gt; inside</td><td>最小高度</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.maxWidth</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>Infinity</code></td><td class="f-tac">outside  =&gt; inside</td><td>最大宽度</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.maxHeight</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>Infinity</code></td><td class="f-tac">outside  =&gt; inside</td><td>最大高度</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.range</code></td><td class="f-wsn">string<br>object<br>Element<br>function</td><td class="f-wsn"></td><td class="f-tac">outside @=&gt; inside</td><td>拖拽范围。值可以为一个{left,top,right,bottom}格式的对象，表示代理元素移动的上下左右边界。当值为`offsetParent`，拖拽时代理元素限制在offsetParent中移动；当值为`parent`；当值为。也可以直接传入一个元素或函数。</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.handles</code></td><td class="f-wsn">Array</td><td class="f-wsn"><code>[...]</code></td><td class="f-tac">outside  =&gt; inside</td><td>句柄</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.handleType</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>句柄类型</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用</td></tr>
-            
-            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
-            
-        
-    </tbody>
-</table>
+        </tbody>
+    </table>
+
 <div id="j-options"></div>
 
 
@@ -201,28 +203,28 @@
 
 var index = 0;
 (function (index) {
-    var template = "<resizable>\n    <div class=\"m-panel m-panel-info\">\n        <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n    </div>\n</resizable>";
+    var template = "<resizable>\n    <div class=\"m-panel m-panel-info\">\n        <div class=\"panel_bd\">\u5C06\u9F20\u6807\u79FB\u5230Panel\u8FB9\u7F18\u5904\uFF0C\u5C1D\u8BD5\u8C03\u6574\u5927\u5C0F\u3002</div>\n    </div>\n</resizable>";
     var component = new RGUI.Component({
         template: template
     });
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<resizable handles={['bottom', 'right', 'bottomright']}>\n    <div class=\"m-panel m-panel-info\">\n        <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n    </div>\n</resizable>";
+    var template = "<resizable handles={['bottom', 'right', 'bottomright']}>\n    <div class=\"m-panel m-panel-info\">\n        <div class=\"panel_bd\">\u5C06\u9F20\u6807\u79FB\u5230Panel\u8FB9\u7F18\u5904\uFF0C\u5C1D\u8BD5\u8C03\u6574\u5927\u5C0F\u3002</div>\n    </div>\n</resizable>";
     var component = new RGUI.Component({
         template: template
     });
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<div class=\"g-row\">\n    <div class=\"g-col g-col-6\">\n        <resizable handleType=\"square\">\n            <div class=\"m-panel m-panel-info\">\n                <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n            </div>\n        </resizable>\n    </div>\n    <div class=\"g-col g-col-6\">\n        <resizable handleType=\"debug\">\n            <div class=\"m-panel m-panel-info\">\n                <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n            </div>\n        </resizable>\n    </div>\n</div>";
+    var template = "<div class=\"g-row\">\n    <div class=\"g-col g-col-6\">\n        <resizable handleType=\"square\">\n            <div class=\"m-panel m-panel-info\">\n                <div class=\"panel_bd\">\u5C06\u9F20\u6807\u79FB\u5230Panel\u8FB9\u7F18\u5904\uFF0C\u5C1D\u8BD5\u8C03\u6574\u5927\u5C0F\u3002</div>\n            </div>\n        </resizable>\n    </div>\n    <div class=\"g-col g-col-6\">\n        <resizable handleType=\"debug\">\n            <div class=\"m-panel m-panel-info\">\n                <div class=\"panel_bd\">\u5C06\u9F20\u6807\u79FB\u5230Panel\u8FB9\u7F18\u5904\uFF0C\u5C1D\u8BD5\u8C03\u6574\u5927\u5C0F\u3002</div>\n            </div>\n        </resizable>\n    </div>\n</div>";
     var component = new RGUI.Component({
         template: template
     });
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<resizable minWidth=\"200\" minHeight=\"100\" maxWidth=\"300\" maxHeight=\"200\">\n    <div class=\"m-panel m-panel-info\">\n        <div class=\"panel_bd\">将鼠标移到Panel边缘处，尝试调整大小。</div>\n    </div>\n</resizable>";
+    var template = "<resizable minWidth=\"200\" minHeight=\"100\" maxWidth=\"300\" maxHeight=\"200\">\n    <div class=\"m-panel m-panel-info\">\n        <div class=\"panel_bd\">\u5C06\u9F20\u6807\u79FB\u5230Panel\u8FB9\u7F18\u5904\uFF0C\u5C1D\u8BD5\u8C03\u6574\u5927\u5C0F\u3002</div>\n    </div>\n</resizable>";
     var component = new RGUI.Component({
         template: template
     });
