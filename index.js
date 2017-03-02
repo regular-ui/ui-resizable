@@ -1,3 +1,3 @@
-import Resizable from './resizable';
+import Resizable from './src/resizable';
 
 export { Resizable };

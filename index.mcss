@@ -1,1 +1,1 @@
-@import './resizable/index.mcss';
+@import './src/resizable/index.mcss';

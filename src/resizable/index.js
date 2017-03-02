@@ -11,8 +11,8 @@ const manager = {
 
 /**
  * @class Resizable
- * @extend Component
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Component
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {number=0}                options.data.left               <=> 水平位置
  * @param {number=0}                options.data.top                <=> 垂直位置
  * @param {number=300}              options.data.width              <=> 宽度
